@@ -1,0 +1,19 @@
+button {
+    color: rgb(91, 91, 91);
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 32px;
+  }
+  
+  .header_btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 8; /* Espacement uniforme */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    transition: color 0.3s ease; /* Transition pour les couleurs au hover */
+    position: relative; /* Nécessaire pour positionner le ::after */
+    outline: none;
+  }
+  

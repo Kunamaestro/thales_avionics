@@ -1,0 +1,58 @@
+button {
+  color: rgb(91, 91, 91);
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 600px;
+}
+
+.header_btn {
+  background: none;
+  border: none;
+  
+  cursor: pointer;
+  padding: 10px 20px;
+  text-decoration: none; /* Supprime le soulignement par défaut */
+  transition: color 0.3s ease; /* Transition pour les couleurs au hover */
+  position: relative; /* Nécessaire pour positionner le ::after */
+  outline: none;
+}
+
+.header_btn:hover {
+  color: rgb(93, 191, 212); /* Change la couleur au survol */
+}
+
+.header_btn:focus {
+  outline: none; /* Supprime le contour par défaut */
+  color: rgb(93, 191, 212); /* Change la couleur au focus */
+}
+
+.header_btn:active {
+  color: rgb(91, 91, 91); /* Change la couleur lorsqu'il est cliqué */
+}
+
+/* Pseudo-élément pour les tirets */
+.header_btn::after {
+  content: ""; /* Génère les tirets dynamiques */
+  display: block;
+  position: absolute;
+  bottom: 0; /* Juste en dessous du texte */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 33%; /* Largeur relative à celle du bouton */
+  height: 1px; /* Hauteur des tirets */
+  background: repeating-linear-gradient(
+      to right,
+      rgb(93, 191, 212) 0,
+      rgb(93, 191, 212) 3px,
+      transparent 4px,
+      transparent 6px
+  ); /* Génère des tirets */
+  opacity: 0; /* Initialement invisible */
+  transition: opacity 0.3s ease; /* Transition fluide */
+}
+
+/* Rendre les tirets visibles au survol */
+.header_btn:hover::after {
+  opacity: 1;
+}
