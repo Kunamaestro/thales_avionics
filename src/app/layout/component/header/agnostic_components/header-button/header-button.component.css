@@ -1,5 +1,5 @@
 button {
-  color: rgb(91, 91, 91);
+  color: var(--secondary-contrast-color);
   margin-left: 10px;
   margin-right: 10px;
   font-size: 16px;
@@ -19,16 +19,16 @@ button {
 }
 
 .header_btn:hover {
-  color: rgb(93, 191, 212); /* Change la couleur au survol */
+  color: var(--tertiary-contrast-color ); /* Change la couleur au survol */
 }
 
 .header_btn:focus {
   outline: none; /* Supprime le contour par défaut */
-  color: rgb(93, 191, 212); /* Change la couleur au focus */
+  color: var(--tertiary-contrast-color ); /* Change la couleur au focus */
 }
 
 .header_btn:active {
-  color: rgb(91, 91, 91); /* Change la couleur lorsqu'il est cliqué */
+  color: var(--secondary-contrast-color); /* Change la couleur lorsqu'il est cliqué */
 }
 
 /* Pseudo-élément pour les tirets */
@@ -43,8 +43,8 @@ button {
   height: 1px; /* Hauteur des tirets */
   background: repeating-linear-gradient(
       to right,
-      rgb(93, 191, 212) 0,
-      rgb(93, 191, 212) 3px,
+      var(--tertiary-contrast-color ) 0,
+      var(--tertiary-contrast-color ) 3px,
       transparent 4px,
       transparent 6px
   ); /* Génère des tirets */

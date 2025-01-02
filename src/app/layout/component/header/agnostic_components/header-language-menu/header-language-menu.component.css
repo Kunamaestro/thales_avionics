@@ -1,0 +1,50 @@
+button {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 32px;
+
+  }
+  
+  .header_btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 8; /* Espacement uniforme */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    transition: color 0.3s ease; /* Transition pour les couleurs au hover */
+    position: relative; /* Nécessaire pour positionner le ::after */
+    outline: none;
+  }
+
+  .arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .arrow {
+
+    border-width: 0 5px 5px 0;
+    transform: rotate(0deg); /* Flèche initiale vers le bas */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .arrow.rotated {
+    transform: rotate(90deg); /* Flèche vers la gauche */
+  }
+
+  
+ ::ng-deep .mat-menu-content{
+  background-color: var(--primary-color) !important;
+  max-width: none!important;
+  white-space: nowrap;
+  overflow-x: hidden!important;
+  
+ }
+
+ .mat-menu-content>button>span{
+  color: white !important;
+ }

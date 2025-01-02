@@ -1,0 +1,16 @@
+<button class="header_btn row align-center" [matMenuTriggerFor]="menu" #isOpen="matMenuTrigger" (click)="isOpenedMenu(isOpen.menuOpen)">
+    {{this.currentLanguage()}}
+    <mat-icon class="arrow" [class.rotated]="isPanelOpen()" >arrow_drop_down</mat-icon>
+</button>
+<mat-menu #menu="matMenu" class="mat-menu-content" (closed)="closeMenu()" >
+  @for(language of languageList;track language){
+    <button mat-menu-item style="color:white">
+      <span>{{language | languagePipe}}</span>
+    </button>
+  }
+
+    
+    
+  </mat-menu>
+
+

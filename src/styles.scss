@@ -1,0 +1,22 @@
+
+@import url("./styles/flex.css");
+
+
+
+
+html, body { height: 100%; }
+body { margin: 0;  }
+
+*{
+    font-family: gibson;
+    font-weight: 400;
+}
+
+:root{
+    --primary-color : #0c0d29;
+    --secondary-color : #A7A8AA;
+    --tertiary-color :  #C0C0C0;
+    --primary-contrast-color : #FFFFFF;
+    --secondary-contrast-color : #565656;
+    --tertiary-contrast-color : #5DBFD4;
+}
